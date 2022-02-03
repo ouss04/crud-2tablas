@@ -1,0 +1,33 @@
+<% include partials/_header %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5 offset-md-3 card">
+      <div class="card-body">
+        <form action="/vehiculo/update/<%= data.bastidor %>" method="POST">
+
+          Bastidor
+          <div class="form-group">
+            <input type="text" name="bastidor" value="<%= data.bastidor%>" placeholder="Bastidor" class="form-control" autofocus>
+          </div>
+
+          Modelo
+          <div class="form-group">
+            <input type="text" name="modelo" value="<%= data.modelo%>" placeholder="Modelo" class="form-control">
+          </div>
+
+          Año
+          <div class="form-group">
+            <input type="text" name="año" value="<%= data.año%>" placeholder="Año" class="form-control">
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            guardar vehiculo
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer %>
